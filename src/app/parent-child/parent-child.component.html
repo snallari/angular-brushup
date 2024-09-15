@@ -1,0 +1,5 @@
+
+        <div *ngFor="let p of posts$|async">
+            {{posts$|async}}
+            <app-title-render [post]="p"  (titleClick)="getClick($event)"></app-title-render>
+        </div>

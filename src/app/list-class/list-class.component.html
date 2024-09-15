@@ -1,0 +1,20 @@
+<div>
+    Hows is list renderd
+    <div *ngIf="isInsane">
+        This is it {{value}}
+    </div>
+    <div *ngIf="!isInsane">
+        This is not {{value}}
+    </div>
+    <form>
+        <fieldset>
+            <label>Name</label>
+            <input type="text" [(ngModel)]="name" name="name"/>
+            <p>{{name}}</p>
+            <label>Email</label>
+            <p>{{email}}</p>
+            <input type="email" [(ngModel)]="email" name="email"/>
+        </fieldset>
+        <button type="submit" (click)="getvalue()">Click me</button>
+    </form>
+</div>
