@@ -15,6 +15,9 @@ const routes: Routes = [
   { path: 'obs', component: ObservableComponent, canActivate:[AuthGuardService]},
   {path: 'split',
     loadChildren: () => import('./spllitu/spllitu.module').then(m => m.SpllituModule)
+  },
+  {path: 'shopping',
+    loadChildren: () => import('./shopping/shopping.module').then(m => m.ShoppingModule)
 }
 ];
 

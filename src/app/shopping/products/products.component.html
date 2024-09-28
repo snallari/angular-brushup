@@ -1,0 +1,9 @@
+<div *ngIf="products.list && products.list.length>0" class="grid-container">
+<div *ngFor="let product of products.list">
+<app-single-product [product]="product"> </app-single-product>
+    
+</div>
+</div>
+<div *ngIf="products.isLoading">
+    Its still loading
+</div>

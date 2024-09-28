@@ -18,8 +18,7 @@ import { ScrollDummyComponent } from './scroll-dummy/scroll-dummy.component';
 import { StoreModule } from '@ngrx/store';
 import { postReducer } from './parent-child/ngrx/state/post.reducer';
 import { collectionReducer } from './parent-child/ngrx/state/collection.reducer';
-import { provideStore } from '@ngrx/store'
-
+import { provideStore } from '@ngrx/store';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,12 +28,12 @@ import { provideStore } from '@ngrx/store'
     ScrollDummyComponent
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
     SpllituModule,
+    BrowserModule,
     StoreModule.forRoot({posts:postReducer,collection:collectionReducer}, {})
   ],
   providers: [ListService, provideHttpClient(), AuthGuardService,provideStore()],
